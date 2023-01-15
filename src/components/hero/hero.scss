@@ -38,7 +38,8 @@
 .hero__text {
    margin: 0;
    margin-bottom: 12px;
-   @media(min-width: $XL){
+
+   @media(min-width: $XL) {
       margin-bottom: 35px;
    }
 }
