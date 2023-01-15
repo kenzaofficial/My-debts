@@ -1,158 +1,31 @@
-.services {
-   padding: 30px 0 40px;
 
-   @media(min-width: $L) {
-      padding: 60px 0 120px;
-   }
+.services {
+  padding: 30px 0 40px;
+  @media (min-width: $L) {
+    padding: 60px 0 120px;
+  }
 }
 
 .services__title {
-   margin: 0 auto;
-   max-width: 600px;
-   text-align: center;
-
-   @media(min-width: $L) {
-      margin-bottom: 20px;
-   }
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  @media (min-width: $L) {
+    margin-bottom: 20px;
+  }
 }
 
 .services__list {
-   padding: 0;
-   list-style: none;
-
-   @media(min-width: $L) {
-      margin: 0;
-   }
+  padding: 0;
+  list-style: none;
+  @media (min-width: $L) {
+    margin: 0;
+  }
 }
 
 .services__item:not(:last-child) {
-   margin-bottom: 10px;
-
-   @media(min-width: $L) {
-      margin-bottom: 20px;
-   }
-}
-
-.card-service {
-   padding: 20px;
-   display: grid;
-   grid-template-areas:
-      "logo titles"
-      "text  text"
-      ".  button";
-   grid-template-columns: auto 1fr;
-   align-items: center;
-   row-gap: 10px;
-   border-radius: 14px;
-   box-shadow: 0px 12px 28px -2px #DFEFFC;
-
-   @media(min-width: $M) {
-      padding: 34px 50px 34px;
-      grid-template-columns: auto 1fr 220px;
-      grid-template-areas:
-         "logo titles titles"
-         "logo text button";
-      column-gap: 10px;
-   }
-
-   @media(min-width: $L) {
-      grid-template-areas:
-         "logo titles button"
-         "logo text button";
-   }
-}
-
-.card-service__logo {
-   grid-area: logo;
-   margin-right: 10px;
-   width: 40px;
-   height: 40px;
-
-   img {
-      width: 100%;
-   }
-
-   @media(min-width: $L) {
-      margin-right: 35px;
-      width: 80px;
-      height: 80px;
-   }
-}
-
-.card-service__titles {
-   grid-area: titles;
-
-   @media(min-width: $M) {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 10px;
-   }
-}
-
-.card-service__title {
-   font-size: 17px;
-   font-weight: 700;
-   line-height: 20px;
-   color: $color-dark-blue;
-
-   @media(min-width: $M) {
-      font-size: 27px;
-      line-height: 34px;
-   }
-}
-
-.card-service__sub-title {
-   font-size: 8px;
-   line-height: 10px;
-   color: $color-secondary;
-
-   @media(min-width: $M) {
-      font-size: 12px;
-      line-height: 20px;
-   }
-}
-
-.card-service__text {
-   grid-area: text;
-   margin: 0;
-   margin-top: 10px;
-   max-width: 670px;
-   line-height: 19px;
-
-   @media(min-width: $M) {
-      font-size: 15px;
-      line-height: 20px;
-      color: $color-black;
-   }
-}
-
-.card-service__button {
-   position: relative;
-   grid-area: button;
-   margin-left: auto;
-   padding: 15px 22px;
-   font-weight: 700;
-   background: $color-secondary url('../img/arrow.svg') center / 18px no-repeat;
-
-   @media(min-width: $L) {
-      padding: 22px;
-   }
-
-   &:hover {
-      background: linear-gradient(165.71deg, $color-secondary 20.77%, rgba(0, 142, 255, 0) 116.88%);
-   }
-
-   span {
-      display: none;
-   }
-
-   @media(min-width: $M) {
-      background: $color-secondary;
-      max-width: 220px;
-      width: 100%;
-
-      span {
-         display: inline-block;
-      }
-   }
+  margin-bottom: 10px;
+  @media (min-width: $L) {
+    margin-bottom: 20px;
+  }
 }
