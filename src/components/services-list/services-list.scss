@@ -1,124 +1,126 @@
-// -------------------------
 .card-service {
-   display: grid;
-   padding: 30px 40px;
-   grid-template-areas:
-      "logo titles"
-      "text  text"
-      ".  button";
-   grid-template-columns: auto 1fr;
-   align-items: center;
-   row-gap: 10px;
-   border-radius: 14px;
-   box-shadow: 0px 12px 28px -2px #DFEFFC;
-
-   @media(min-width: $M) {
-      padding: 34px 50px 34px;
-      grid-template-columns: auto 1fr 220px;
-      grid-template-areas:
-         "logo titles titles"
-         "logo text button";
+  display: grid;
+  align-items: center;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px -2px #dfeffc;
+  grid-template-areas:
+    "logo titles"
+    "text  text"
+    ".  button";
+  grid-template-columns: auto 1fr;
+  row-gap: 10px;
+  @media (min-width: $M) {
+    padding: 34px 50px 34px;
+    grid-template-columns: auto 1fr 220px;
+    grid-template-areas:
+      "logo titles titles"
+      "logo text button";
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+  @media (min-width: $L) {
+    grid-template-areas:
+      "logo titles button"
+      "logo text button";
+  }
+  .card-service__logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    grid-area: logo;
+    img {
+      width: 100%;
+    }
+    @media (min-width: $L) {
+      width: 80px;
+      height: 80px;
+      margin-right: 35px;
+    }
+  }
+  a {
+    position: relative;
+    margin-left: auto;
+    padding: 15px 22px;
+    background: $color-secondary;
+    font-weight: 700;
+    grid-area: button;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 14px;
+      background: url("../img/arrow.svg") center / 18px no-repeat;
+      @media (min-width: $M) {
+        display: none;
+      }
+    }
+    @media (min-width: $L) {
+      padding: 22px;
+    }
+    &:hover {
+      background:
+        linear-gradient(
+          165.71deg,
+          $color-secondary 20.77%,
+          rgba(0, 142, 255, 0) 116.88%
+        );
+    }
+    &:active {
+      background: $color-secondary;
+      box-shadow: none;
+    }
+    span {
+      display: none;
+    }
+    @media (min-width: $M) {
+      width: 100%;
+      max-width: 220px;
+      background: $color-secondary;
+      span {
+        display: inline-block;
+      }
+    }
+  }
+  .card-service__titles {
+    grid-area: titles;
+    @media (min-width: $M) {
+      display: flex;
+      flex-wrap: wrap;
       column-gap: 10px;
-   }
-
-   @media(min-width: $L) {
-      grid-template-areas:
-         "logo titles button"
-         "logo text button";
-   }
-   .card-service__logo {
-      grid-area: logo;
-      margin-right: 10px;
-      width: 40px;
-      height: 40px;
-
-      img {
-         width: 100%;
-      }
-
-      @media(min-width: $L) {
-         margin-right: 35px;
-         width: 80px;
-         height: 80px;
-      }
-   }
-
-   .card-service__titles {
-      grid-area: titles;
-
-      @media(min-width: $M) {
-         display: flex;
-         flex-wrap: wrap;
-         column-gap: 10px;
-      }
-
-      h4 {
-         font-size: 17px;
-         font-weight: 700;
-         line-height: 20px;
-         color: $color-dark-blue;
-
-         @media(min-width: $M) {
-            font-size: 27px;
-            line-height: 34px;
-         }
-      }
-
-      span {
-         font-size: 8px;
-         line-height: 10px;
-         color: $color-secondary;
-
-         @media(min-width: $M) {
-            font-size: 12px;
-            line-height: 20px;
-         }
-      }
-   }
-
-   p {
-      grid-area: text;
-      margin: 0;
-      margin-top: 10px;
-      max-width: 670px;
-      line-height: 19px;
-
-      @media(min-width: $M) {
-         font-size: 15px;
-         line-height: 20px;
-         color: $color-black;
-      }
-   }
-
-   a {
-      position: relative;
-      grid-area: button;
-      margin-left: auto;
-      padding: 15px 22px;
+    }
+    h4 {
+      font-size: 17px;
       font-weight: 700;
-      background: $color-secondary url('../img/arrow.svg') center / 18px no-repeat;
-
-      @media(min-width: $L) {
-         padding: 22px;
+      line-height: 20px;
+      color: $color-dark-blue;
+      @media (min-width: $M) {
+        font-size: 27px;
+        line-height: 34px;
       }
-
-      &:hover {
-         background: linear-gradient(165.71deg, $color-secondary 20.77%, rgba(0, 142, 255, 0) 116.88%);
+    }
+    span {
+      font-size: 8px;
+      line-height: 10px;
+      color: $color-secondary;
+      @media (min-width: $M) {
+        font-size: 12px;
+        line-height: 20px;
       }
-
-      span {
-         display: none;
-      }
-
-      @media(min-width: $M) {
-         background: $color-secondary;
-         max-width: 220px;
-         width: 100%;
-
-         span {
-            display: inline-block;
-         }
-      }
-   }
-
+    }
+  }
+  p {
+    max-width: 670px;
+    margin: 0;
+    line-height: 19px;
+    grid-area: text;
+    @media (min-width: $M) {
+      font-size: 15px;
+      line-height: 20px;
+      color: $color-black;
+    }
+  }
 }

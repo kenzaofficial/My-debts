@@ -8,8 +8,8 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "stylelint": "stylelint '**/*.scss'",
-    "stylelint:fix": "stylelint '**/*.scss' --fix"
+    "stylelint": "stylelint \"**/*.scss\"",
+    "stylelint:fix": "stylelint \"**/*.scss\" --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
