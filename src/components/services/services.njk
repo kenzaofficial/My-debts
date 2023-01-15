@@ -1,8 +1,5 @@
-<section class="services">
-   <div class="container services__container">
-      <h3 class="services__title title">Рейтинг онлайн-сервисов для поиска и проверки задолженностей</h3>
-      {% from '../../components/services-list/services-list.njk' import list %}
-      {% set info = [
+{% from '../../components/services-list/services-list.njk' import list %}
+{% set info = [
         {
           class: 'services__item',
           card: {
@@ -104,6 +101,10 @@
                   }
          }
 ] %}
+<section class="services">
+   <div class="container services__container">
+      <h3 class="services__title title">Рейтинг онлайн-сервисов для поиска и проверки задолженностей</h3>
+
       {{  list(info, 'services__list') }}
    </div>
 </section>

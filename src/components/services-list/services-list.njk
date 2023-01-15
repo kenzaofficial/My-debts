@@ -1,33 +1,29 @@
 {% macro list(items, nameList) %}
-  <ul class="{{ nameList }}">
-    {% for item in items %}
-      <li class={{ item.class }}>
-        {% if item.card %}
-          <div class={{item.card.class}}>
-            {% if item.card.pathImg %}
-              <div class='card-service__logo'>
-                <img src="{{ item.card.pathImg }}">
-              </div>
-            {% endif %}
-            {%if item.card.titles%}
-              <div class={{item.card.titles.class}}>
-                <h4>{{item.card.titles.title}}</h4>
-                <span>{{item.card.titles.subTitle}}</span>
-                {%endif%}
-              </div>
-            {% endif %}
-            {% if item.card.description %}
-              <p>{{ item.card.description }}</p>
-            {% endif %}
-            {% if item.card.button %}
-            <a href="#"class="button">
-            <span>
-            {{item.card.button}}</span>
-            </a>
-              {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    {% endmacro %}
-
-  
+<ul class="{{ nameList }}">
+  {% for item in items %}
+  <li class={{ item.class }}>
+    <div class={{item.card.class}}>
+      {% if item.card.pathImg %}
+      <div class='card-service__logo'>
+        <img src="{{ item.card.pathImg }}">
+      </div>
+      {% endif %}
+      {%if item.card.titles%}
+      <div class={{item.card.titles.class}}>
+        <h4>{{item.card.titles.title}}</h4>
+        <span>{{item.card.titles.subTitle}}</span>
+      </div>
+      {% endif %}
+      {% if item.card.description %}
+      <p>{{ item.card.description }}</p>
+      {% endif %}
+      {% if item.card.button %}
+      <a href="#" class="button">
+        <span>
+          {{item.card.button}}</span>
+      </a>
+      {%endif%}
+  </li>
+  {% endfor %}
+</ul>
+{% endmacro %}
