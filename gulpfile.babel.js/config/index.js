@@ -1,9 +1,8 @@
 /* ['pages/index/index.njk', 'pages/index/about.html'] - multiple entry points */
 /* ['pages/index/index.js', 'pages/index/about.js'] - multiple entry points */
-
 const paths = {
   src: './src',
-  dist: './dist',
+  dist: './docs',
 
   pug: {
     src: 'pages/main/main.pug',
@@ -16,7 +15,9 @@ const paths = {
   },
 
   njk: {
-    src: 'pages/main/main.njk',
+    src: [
+      'pages/main/main.njk',
+    ],
     dist: '',
   },
 

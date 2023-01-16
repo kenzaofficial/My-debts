@@ -5,6 +5,7 @@ import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
 import es from 'event-stream';
+import prettyHtml from 'gulp-pretty-html';
 import { paths } from '../../config';
 
 export default gulp.task('nunjucks', (done) => {
@@ -24,6 +25,9 @@ export default gulp.task('nunjucks', (done) => {
     .pipe(
       nunjucks({
         path: paths.src,
+        envOptions: {
+          trimBlocks: true,
+        },
       }),
     )
     .pipe(
@@ -33,6 +37,10 @@ export default gulp.task('nunjucks', (done) => {
         }
       }),
     )
+    .pipe(prettyHtml({
+      indent_size: 2,
+      indent_char: ' ',
+    }))
     .pipe(gulp.dest(path.resolve(paths.dist, paths.njk.dist)));
 
   if (Array.isArray(paths.njk.src)) {

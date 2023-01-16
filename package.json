@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build",
+    "build": "gulp build && prettier --write \"./docs/**/*.html\"",
     "stylelint": "stylelint \"**/*.scss\"",
     "stylelint:fix": "stylelint \"**/*.scss\" --fix"
   },
@@ -19,6 +19,7 @@
     "eslint": "^7.27.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.3",
+    "gulp-pretty-html": "^2.0.10",
     "husky": "^6.0.0",
     "path": "^0.12.7",
     "prettier": "2.3.0",
