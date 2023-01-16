@@ -1,10 +1,3 @@
-.header {
-  padding-top: 16px;
-  @media (min-width: $M) {
-    padding-top: 30px;
-  }
-}
-
 .header__container {
   max-width: 1380px;
   padding: 0 10px;
@@ -17,11 +10,13 @@
 }
 
 .header__body {
+  padding-top: 16px;
   border-bottom: 0.5px solid $color-dark-blue;
   text-align: center;
   @media (min-width: $M) {
     display: grid;
     align-items: center;
+    padding-top: 30px;
     padding-bottom: 30px;
     grid-template-columns: 100px 1fr;
     column-gap: 67px;
@@ -79,6 +74,7 @@
   font-weight: 400;
   line-height: 13px;
   letter-spacing: -0.03em;
+  transition: 0.3s;
   @media (min-width: $S) {
     font-size: 14px;
     line-height: 25px;
@@ -86,5 +82,9 @@
   @media (min-width: $M) {
     font-size: 18px;
     line-height: 25px;
+    &:hover {
+      transform: scale(1.1);
+      color: $color-secondary;
+    }
   }
 }

@@ -30,6 +30,14 @@
     align-items: flex-start;
     justify-content: space-between;
   }
+  a {
+    display: inline-block;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+      color: $color-orange;
+    }
+  }
 }
 
 .footer__copyright {

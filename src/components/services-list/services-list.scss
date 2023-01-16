@@ -41,10 +41,14 @@
   a {
     position: relative;
     margin-left: auto;
-    padding: 15px 22px;
+    padding: 9px 22px;
     background: $color-secondary;
+    font-size: 0;
     font-weight: 700;
     grid-area: button;
+    @media (min-width: $M) {
+      padding: 15px 22px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -73,19 +77,14 @@
       background: $color-secondary;
       box-shadow: none;
     }
-    span {
-      display: none;
-    }
     @media (min-width: $M) {
       width: 100%;
       max-width: 220px;
       background: $color-secondary;
-      span {
-        display: inline-block;
-      }
+      font-size: 16px;
     }
   }
-  .card-service__titles {
+  div:last-of-type {
     grid-area: titles;
     @media (min-width: $M) {
       display: flex;

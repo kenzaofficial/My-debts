@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  {{ head('index', 'Main page') }}
+  {{ head('index', 'Проверка долгов') }}
 
   <body class="p-main">
     {% include 'components/header/header.njk' %}
@@ -15,7 +15,7 @@
       {% include 'components/services/services.njk' %}
       {% include 'components/feedback/feedback.njk' %}
     </main>
-{% include 'components/footer/footer.njk' %}
+    {% include 'components/footer/footer.njk' %}
     {{ scripts('index') }}
   </body>
 

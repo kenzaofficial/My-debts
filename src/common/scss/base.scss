@@ -32,10 +32,20 @@
     line-height: 16px;
   }
   &:hover {
-    background: linear-gradient(162.11deg, $color-primary-blue -37.43%, rgba(6, 95, 229, 0) 248.12%);
+    background:
+      linear-gradient(
+        162.11deg,
+        $color-primary-blue -37.43%,
+        rgba(6, 95, 229, 0) 248.12%
+      );
   }
   &:active {
-    background: linear-gradient(165.63deg, $color-primary-blue 10.2%, rgba(6, 95, 229, 0) 258.43%);
+    background:
+      linear-gradient(
+        165.63deg,
+        $color-primary-blue 10.2%,
+        rgba(6, 95, 229, 0) 258.43%
+      );
   }
 }
 

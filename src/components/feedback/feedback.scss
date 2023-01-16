@@ -10,8 +10,14 @@
   display: grid;
   padding: 20px 55px 30px;
   border-radius: 14px;
-  background-color: $color-secondary;
+  background:
+    $color-secondary url("../img/feedback-bg/mobile-bg.svg") center /
+    cover no-repeat;
   place-items: center;
+  @media (min-width: $M) {
+    background-image: url("../img/feedback-bg/desktop-bg.svg");
+  }
+
   row-gap: 25px;
   @media (min-width: $XL) {
     display: flex;
@@ -44,7 +50,12 @@
     margin-left: auto;
   }
   &:hover {
-    background: linear-gradient(187.69deg, #fff 5.95%, rgba(255, 255, 255, 0) 245.63%);
+    background:
+      linear-gradient(
+        187.69deg,
+        #fff 5.95%,
+        rgba(255, 255, 255, 0) 245.63%
+      );
   }
   &:active {
     background: #fff;
